@@ -1,0 +1,9 @@
+/*colors*/
+.btn-callme--red:after {
+  background: -webkit-linear-gradient(top, rgba(255,48,25,1) 42%,rgba(207,4,4,1) 89%);
+  background: linear-gradient(to bottom, rgba(255,48,25,1) 42%,rgba(207,4,4,1) 89%);
+}
+.btn-callme--red:hover:after {
+  background: -webkit-linear-gradient(top, rgba(229,34,34,1) 22%,rgba(255,72,56,1) 89%);
+  background: linear-gradient(to bottom, rgba(229,34,34,1) 22%,rgba(255,72,56,1) 89%);
+}

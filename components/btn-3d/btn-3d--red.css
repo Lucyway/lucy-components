@@ -1,0 +1,34 @@
+/*>>= = = = = = = = = = = = = = = = = = = = <<
+
+-- btn-3d--red
+
+= = = = = = = = = = = = = = = = = = = = = = */
+
+.btn-3d--red {
+  background-color:#ff3019;
+  border-left:solid 1px #EF614F;
+  border-right: 1px solid #222;
+  background: -webkit-linear-gradient(top, rgba(247,110,86,1) 4%,rgba(244,80,58,1) 32%,rgba(240,47,23,1) 55%,rgba(231,56,39,1) 71%);
+  background: linear-gradient(to bottom, rgba(247,110,86,1) 4%,rgba(244,80,58,1) 32%,rgba(240,47,23,1) 55%,rgba(231,56,39,1) 71%);
+  box-shadow: inset
+  0px 1px 0px #EF614F,
+  1px 5px 0px 0px #B71717,
+  0px 10px 5px #999;
+}
+
+.btn-3d--red:active {
+  background: -webkit-linear-gradient(top, rgba(247,110,86,1) 4%,rgba(244,80,58,1) 12%,rgba(240,47,23,1) 67%,rgba(226,93,81,1) 91%);
+  background: linear-gradient(to bottom, rgba(247,110,86,1) 4%,rgba(244,80,58,1) 12%,rgba(240,47,23,1) 67%,rgba(226,93,81,1) 91%);
+  box-shadow: inset     0px 1px 0px #EF614F,     0px 2px 0px 0px #B71717,     0px 5px 3px #999;
+}
+
+.btn-3d--red:before {
+  text-shadow: 1px 1px 0px #222;
+  background: -webkit-linear-gradient(top, rgba(255,48,25,1) 22%,rgba(207,4,4,1) 72%);
+  background: linear-gradient(to bottom, rgba(255,48,25,1) 22%,rgba(207,4,4,1) 72%);
+  box-shadow:inset 0px 0px 0px #EF614F, 5px 0px 0px 0px #910D0D, 0px 0px 0px 0px #CC483F, 10px 0px 5px #999;
+}
+
+.btn-3d--red:active:before {
+  box-shadow: inset 0px 0px 0px #ff3019, 5px 0px 0px 0px #910D0D, 1px 1px 0px 0px #910D0D, 2px 2px 0px 0px #910D0D, 4px 1px 1px 0px #910D0D, 4px 4px 2px #CC483F, 10px 0px 5px #999;
+}

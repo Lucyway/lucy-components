@@ -1,0 +1,472 @@
+/*>>= = = = = = = = = = = = = = = = = = = = <<
+
+
+MODULE: Requirements CMS
+
+
+= = = = = = = = = = = = = = = = = = = = = = */
+
+/*>>= = = = = = = = = = = = = = = = = = = = <<
+
+--MediaBox control
+
+= = = = = = = = = = = = = = = = = = = = = = */
+/* System: Start mediaBox control */
+
+.MediaBox_shadow{
+    position: fixed;
+    display: none;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    z-index: 100000;
+}
+
+* html .MediaBox_shadow{
+    position: absolute;
+}
+
+.MediaBox{
+    position: fixed;
+    display: none;
+    background: #fff;
+    z-index: 100001;
+}
+
+* html .MediaBox{
+    position: absolute;
+}
+
+.MediaBox_shadowL, .MediaBox_shadowR, .MediaBox_shadowT, .MediaBox_shadowB, .MediaBox_shadowLT, .MediaBox_shadowRT, .MediaBox_shadowLB, .MediaBox_shadowRB{
+    position: absolute;
+    overflow: hidden;
+}
+
+.MediaBox_shadowL, .MediaBox_shadowR{
+    width: 15px;
+    height: 100%;
+    background: url(_img/ami_jsapi/shade-v.png) repeat-y;
+}
+
+.MediaBox_shadowL{
+    left: -15px;
+    top: 0px;
+}
+
+.MediaBox_shadowR{
+    right: -15px;
+    top: 0px;
+    background-position: -15px 0px;
+}
+
+.MediaBox_shadowT, .MediaBox_shadowB{
+    width: 100%;
+    height: 15px;
+    background: url(_img/ami_jsapi/shade-h.png) repeat-x;
+}
+
+.MediaBox_shadowT{
+    left: 0px;
+    top: -15px;
+}
+
+.MediaBox_shadowB{
+    left: 0px;
+    bottom: -15px;
+    background-position: 0px -15px;
+}
+
+.MediaBox_shadowLT, .MediaBox_shadowRT, .MediaBox_shadowLB, .MediaBox_shadowRB{
+    width: 15px;
+    height: 15px;
+    background: url(_img/ami_jsapi/shade-c.png) no-repeat;
+}
+
+.MediaBox_shadowLT{
+    left: -15px;
+    top: -15px;
+}
+
+.MediaBox_shadowRT{
+    right: -15px;
+    top: -15px;
+    background-position: -15px 0px;
+}
+
+.MediaBox_shadowLB{
+    left: -15px;
+    bottom: -15px;
+    background-position: 0px -15px;
+}
+
+.MediaBox_shadowRB{
+    right: -15px;
+    bottom: -15px;
+    background-position: -15px -15px;
+}
+
+.MediaBox_speckLT{
+    position: absolute;
+    width: 0px;
+    height: 0px;
+}
+
+.MediaBox_speckRB{
+    position: absolute;
+    width: 0px;
+    height: 0px;
+}
+
+.MediaBox_close{
+    position: absolute;
+    width: 39px;
+    height: 39px;
+    right: -20px;
+    top: -20px;
+    background: url(_img/ami_jsapi/close.png);
+    cursor: pointer;
+}
+
+.MediaBox_loader{
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    left: 50%;
+    top: 50%;
+    margin: -16px 0px 0px -16px;
+    background: url(_img/ami_jsapi/loader.gif);
+}
+
+.MediaBox_container{
+    margin: 10px 10px;
+}
+
+/* Black version */
+
+.MediaBoxBlack{
+    background: #000;
+}
+
+.MediaBoxBlack .MediaBox_shadowL, .MediaBoxBlack .MediaBox_shadowR{
+    background-image: url(_img/ami_jsapi/glass-frame-v.png);
+}
+
+.MediaBoxBlack .MediaBox_shadowT, .MediaBoxBlack .MediaBox_shadowB{
+    background-image: url(_img/ami_jsapi/glass-frame-h.png);
+}
+
+.MediaBoxBlack .MediaBox_shadowLT, .MediaBoxBlack .MediaBox_shadowRT, .MediaBoxBlack .MediaBox_shadowLB, .MediaBoxBlack .MediaBox_shadowRB{
+    background-image: url(_img/ami_jsapi/glass-frame-c.png);
+}
+
+.MediaBoxBlack .MediaBox_speckLT{
+    background-image: url(_img/ami_jsapi/glass-frame-c2lt.png);
+}
+
+.MediaBoxBlack .MediaBox_speckRB{
+    background-image: url(_img/ami_jsapi/glass-frame-c2rb.png);
+}
+
+.MediaBoxBlack .MediaBox_close{
+    right: -25px;
+    top: -25px;
+    background-image: url(_img/ami_jsapi/glass-frame-close.png);
+}
+
+.MediaBoxBlack .MediaBox_loader{
+    background-image: url(_img/ami_jsapi/loader-black.gif);
+}
+
+.MediaBoxBlack .MediaBox_container{
+    margin: 0px 0px;
+}
+
+img[data-ami-mbpopup],
+.mb-image {
+    cursor: url(_img/ami_jsapi/pointer_plus.png), pointer;
+}
+
+.MediaBox_loader{
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    left: 50%;
+    top: 50%;
+    margin: -16px 0px 0px -16px;
+    background: url(_img/ami_jsapi/loader.gif);
+    z-index: 100002;
+}
+
+.MediaBox_group{
+    margin: 10px;
+    margin-bottom: 0px;
+    font-style: italic;
+}
+
+.MediaBox_header{
+    margin: 10px;
+    margin-bottom: 0px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.MediaBox_url{
+    margin: 10px;
+    margin-bottom: 0px;
+    text-align: center;
+}
+
+.MediaBox_description{
+    padding: 10px;
+    padding-bottom: 0px;
+}
+
+.MediaBox_imageArea{
+    position: relative;
+}
+
+.MediaBox_previous{
+    position: absolute;
+    left: -28px;
+    top: 50%;
+    width: 32px;
+    height: 63px;
+    margin-top: -32px;
+    background: url(_img/ami_jsapi/mb-prev.png);
+    cursor: pointer;
+}
+
+.MediaBox_next{
+    position: absolute;
+    right: -28px;
+    top: 50%;
+    width: 32px;
+    height: 63px;
+    margin-top: -32px;
+    background: url(_img/ami_jsapi/mb-next.png);
+    cursor: pointer;
+}
+
+.MediaBox_container{
+    position: relative;
+    margin: 10px 10px 0px 10px;
+    text-align: center;
+}
+
+.MediaBox_zoom{
+    margin: 10px;
+    margin-bottom: 0px;
+    text-align: right;
+    font-style: italic;
+}
+
+.MediaBox_zoom a{
+    font-style: italic;
+}
+
+#MediaBox_sliderPrevious{
+    float: left;
+    width: 10px;
+    height: 20px;
+    margin: 40px 0px 0px 10px;
+    background: #00f;
+    cursor: pointer;
+}
+
+#MediaBox_sliderNext{
+    float: right;
+    width: 10px;
+    height: 20px;
+    margin: 40px 10px 0px 0px;
+    background: #00f;
+    cursor: pointer;
+}
+
+.MediaBox .disabled{
+    background: #ccf !important;
+    cursor: default !important;
+}
+
+.MediaBox_slider{
+    position: relative;
+    overflow: hidden;
+    height: 80px;
+    margin: 10px 30px 0px 30px;
+    white-space: nowrap;
+}
+
+.MediaBox_sliderImage{
+    max-height: 80px;
+    cursor: pointer;
+}
+
+.MediaBox_sliderDelimeter{
+    display: -moz-inline-stack;
+    display: inline-block;
+    zoom: 1;
+    *display: inline;
+    width: 10px;
+}
+
+.MediaBox_counter{
+    margin: 10px;
+    margin-bottom: 0px;
+    text-align: right;
+    font-style: italic;
+}
+
+/* SYSTEM: End mediaBox control */
+
+
+/* SYSTEM: Start multiselectbox */
+
+div.mselectFrame{
+    display: -moz-inline-stack;
+    display: inline-block;
+    zoom: 1;
+    *display: inline;
+    border: 1px solid #848484;
+    overflow: auto;
+}
+
+div.mselectOption, div.mselectOptionselected{
+    padding: 0px 2px;
+    white-space: nowrap;
+    cursor: default;
+}
+
+div.mselectOptionselected{
+    background: #5fabfe;
+    color: #fff;
+}
+
+/* System: End multiselectbox */
+
+
+/* MODULE: Start hyper modules: blog 
+ * @tpl ami_multifeeds.tpl
+ */
+
+div.blog_item-small-row__header,
+div.blog_item-row__header,
+div.blog_item-small-row__cat_header,
+blog_item-row__img_small-img{
+    margin-bottom: 15px;
+    padding-right: 30px;
+    text-align: center;
+}
+.blog_item-row__header-name {
+    color: #333;
+    font-weight: 600;
+    text-transform:uppercase;
+    }
+
+
+.blog_item-row__announce,
+.blog_item-cat-row__announce,
+.blog_item-small-row__announce,
+.blog_item-row__img_small-img {
+    margin-bottom: 10px;
+    padding-right: 15px;
+}
+
+.image_click_blog {
+    margin-bottom:15px;
+}
+.blog_item-row__img_small-img {
+    margin-bottom:15px;
+    text-align: center;
+}
+.blog_item .blog_item-row {
+    overflow: hidden;
+    display: block;
+}
+.blog-anounce_body {
+    
+}
+@media(min-width:640px) {
+    .image_click_blog {
+        float: left;
+        margin-right:15px;
+    }
+}
+@media(min-width:640px) {
+    .blog_item .blog_item-row__img_small-img  {
+        float: left;
+        margin-right:15px;
+        overflow:hidden;
+    }
+
+}
+
+
+
+/* MODULE: End hyper modules: blog 
+ * @tpl ami_multifeeds.tpl
+ */
+
+/* System: Start discussion
+ * @tpl discussion.tpl
+ */
+.popupContent {
+    background:lightgray;
+    padding:20px;
+    border-radius:5px;
+}
+.discussion_amiroTEdDivPreview,
+.quest_preview,
+.forum_preview {
+    border: 1px solid #A5A5A5;
+    display: none;
+    padding: 4px;
+    background: #F0F0F0;
+    margin-bottom: 10px;
+    margin-left: 4px;
+    margin-top: 6px;
+}
+
+.front_edit_msg, .quest_subject_item_row, .quest_answer_for, .forum_topic,
+.forum_front_edit, .forum_tr_create_topic, .discussion_front_edit,
+.discussion_span_answer_for {
+    display: none;
+}
+
+.quest_bb_preview,
+.forum_bb_preview {
+    text-align:center;display:none;
+}
+a[name="forum"] ~ table,
+a[name="forum"] ~ table>tbody,
+a[name="forum"] ~ table>tbody>tr {
+    width:100%;
+    display:block;
+}
+.quest_quote_messages,
+.quest_quote_messages tbody,
+.quest_quote_messages tr {
+    display: block;
+    width:100%;
+}
+/* System: End discussion
+ * @tpl discussion.tpl
+ */
+
+
+/**/
+.nav-menu {
+
+}
+.nav-menu_position_top {
+
+}
+.nav-menu__item {
+    display: block;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+/*CMS utilities*/
+.expand {display: none}
+table[id*="sign"] {display: none!important;}

@@ -1,0 +1,26 @@
+/*>>= = = = = = = = = = = = = = = = = = = = <<
+
+
+MODULE: plug Fonts
+
+need copy "_fonts" (folder) to root directory of site
+= = = = = = = = = = = = = = = = = = = = = = */
+@font-face {
+    font-family: "Roboto Condensed";
+    src: url("_fonts/RobotoCondensed/roboto-condensed.eot");
+    src: url("_fonts/RobotoCondensed/roboto-condensed.eot?#iefix")format("embedded-opentype"),
+    url("_fonts/RobotoCondensed/roboto-condensed.woff") format("woff"),
+    url("_fonts/RobotoCondensed/roboto-condensed.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "Roboto Condensed";
+    src: url("_fonts/RobotoCondensed/roboto-boldcondensed.eot");
+    src: url("_fonts/RobotoCondensed/roboto-boldcondensed.eot?#iefix")format("embedded-opentype"),
+    url("_fonts/RobotoCondensed/roboto-boldcondensed.woff") format("woff"),
+    url("_fonts/RobotoCondensed/roboto-boldcondensed.ttf") format("truetype");
+    font-style: normal;
+    font-weight: bold;
+}

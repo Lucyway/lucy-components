@@ -1,0 +1,71 @@
+/*>>= = = = = = = = = = = = = = = = = = = = <<
+
+--table
+
+= = = = = = = = = = = = = = = = = = = = = = */
+/*<div class="wrap-table">
+<table class="table">*/
+
+/* Tables */
+.table {
+  width: 100%;
+  overflow: auto;
+  border-collapse: collapse;
+  -webkit-overflow-scrolling: touch;
+  display: block;
+}
+.table::-webkit-scrollbar {
+  display: none;
+}
+.table td {
+  padding: 11px .5em;
+  vertical-align: top;
+}
+.table tr:first-child td {
+  color: #fff;
+  font-weight: bold;
+  padding-bottom: 22px;
+}
+.table tr:nth-child(2n+1) {
+  background: #eee;
+}
+.table tr:first-child {
+  font-size: 1.1em;
+  background: #292b2e;
+}
+.table td {
+  border: 1px solid #ddd;
+}
+.table tr td:first-child {
+  font-weight: bold;
+}
+table.scroll {
+  display: block;
+  overflow: scroll;
+  table-layout: auto;
+}
+table.scroll td {
+  word-break: normal;
+}
+div.wrap-table {
+  overflow-x: auto;
+}
+
+div.wrap-table::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 24px;
+  height: 24px;
+}
+div.wrap-table::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  border: 3px solid #fff;
+  background-color: rgba(0, 0, 0, 0.3);  
+}
+
+div.wrap-table .table {
+  display: table;
+}
+.table tr:hover td {
+  color: #333;
+  background: #F7F7F7;
+}

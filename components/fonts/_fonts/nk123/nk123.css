@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'NK123';
+    src: url('nk123.eot');
+    src: url('nk123.eot?#iefix') format('embedded-opentype'),
+         url('nk123.woff') format('woff'),
+         url('nk123.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}

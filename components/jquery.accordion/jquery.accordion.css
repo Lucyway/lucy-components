@@ -1,0 +1,55 @@
+/*>>= = = = = = = = = = = = = = = = = = = = <<
+
+--Accordion (js)
+
+= = = = = = = = = = = = = = = = = = = = = = */
+
+.accordion {
+  /* border-top: 1px solid #ddd; */
+  /* border-right: 1px solid #ddd; */
+  /* border-left: 1px solid #ddd; */
+}
+.ac-item {
+  padding: 10px;
+  position: relative;
+  width: 100%;
+  background: #FAFAFA;
+  box-shadow: 1px 1px 3px gray;    
+  margin: 5px 0;
+}
+.ac-item.open {
+  /* border-bottom: 1px dashed #ddd; */
+}
+.ac-item-link:after {
+    content: "+";
+    font-weight: bold;
+    font-size: larger;
+    position: absolute;
+    right: 10px;
+    color: #888;
+    top: 10px;
+    display: block;
+}
+.ac-item.open .ac-item-link:after {
+    content: "-";
+}
+.ac-item-link {
+    width: 100%;
+    display: block;
+}
+.ac-inner {
+  padding: 10px;
+  border-left: 1px solid #ddd;
+  position: relative;
+  font-size: 12px;
+  border-right: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
+
+/*dev-style: if inner list*/
+.ac-inner ul {
+    padding-left: 0;
+}
+.ac-inner li {
+    list-style: none;
+}
